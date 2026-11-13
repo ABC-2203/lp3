@@ -214,7 +214,40 @@
 // If the item is too heavy to fit entirely, take just enough of it (a fraction) to completely fill up the remaining capacity, add that fractional value, and stop.
 
 
+// This @Override function is used to compare two objects based on their value-to-weight ratio. It is commonly used in the Fractional Knapsack problem to sort items in descending order of profit per unit weight.
 
+// Let's understand it step by step.
+// 1. What is @Override?
+// @Override
+// public int compare(Item o1, Item o2)
+
+
+// - @Override is an annotation in Java.
+// - It tells Java that we are redefining an existing method of a parent class or interface.
+// - Here, we are overriding the compare() method of the Comparator interface.
+// Why do we use it?
+
+// To define our own logic for comparing two objects.
+// 2. What is compare(Item o1, Item o2)?
+// public int compare(Item o1, Item o2)
+
+
+// - Item → Class name.
+// - o1 → First item object.
+// - o2 → Second item object.
+// - compare() → Compares these two objects.
+// - int → Returns an integer.
+// 3. Understanding the ratio calculation
+// double r1 = (double) o1.value / o1.weight;
+// double r2 = (double) o2.value / o2.weight;
+
+
+// We calculate the value-to-weight ratio of both items.
+
+// Formula:
+// \[
+// Ratio = \frac{Value}{Weight}
+// \]
 
 // 4. Algorithm for Fractional KnapsackInput: 
 // 1. Number of items $n$, arrays val[] and weight[], and total capacity W.
